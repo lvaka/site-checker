@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container my-5">
+	<div class="row">
+		<div class="col-md-8 offset-md-2">
+			<h1>Site Detector</h1>
+			<div class="text-right">
+				<button onClick="window.runTests()" class="btn btn-primary mr-2">
+					Run Tests
+				</button>
+				<a href="/new-site" class="btn btn-primary mr-2">
+					Add Site
+				</a>
+				<a href="/set-schedule" class="btn btn-primary mr-2">
+					Set Schedule
+				</a>
+				<a href="/logout" class="btn btn-primary">
+					Logout
+				</a>
+			</div>
+			<table class="table mt-5">
+				<thead>
+					<tr>
+						<th scope="col">
+							Title
+						</th>
+						<th scope="col">
+							Url
+						</th>
+						<th scope="col">
+							Site is Up
+						</th>
+						<th>
+						</th>
+					</tr>
+				</thead>
+				<tbody id="site-status-table">
+					{% for site in sites %}
+						<tr>
+							<th scope="row">
+								{{ site.title }}
+							</th>
+							<td>
+								{{ site.url }}
+							</td>
+							<th scope="row" class="text-center">
+								?
+							</td>
+							<td>
+								<a href="/delete-site?id={{ site.id }}" class="btn btn-danger">
+									Remove Site
+								</a>
+							</td>
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+			<div class="d-flex justify-content-center">
+				<div class="lds-roller d-none"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

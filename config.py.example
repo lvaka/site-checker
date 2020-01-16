@@ -1,0 +1,6 @@
+DEBUG = #set True or False
+SECRET_KEY = 'hash string'
+SQLALCHEMY_DATABASE_URI = 'mysql://user:pass@host:port/database?unix_socket=path to mysql.sock'
+SQLALCHEMY_TRACK_MODIFICATIONS = False
+SENDMAIL_LOCATION = '/usr/sbin/sendmail'
+USER = 'user to set cronjobs under'

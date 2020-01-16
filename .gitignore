@@ -1,0 +1,9 @@
+node_modules/
+config.py
+instance/
+*.pyc
+__pycache__/
+migrations/
+public/
+env/
+.DS_Store

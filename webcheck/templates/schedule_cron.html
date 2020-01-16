@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container my-5">
+	<div class="row">
+		<div class="col-md-8 offset-md-2">
+			<h1>Schedule time for Each - <small>(* for any)</small></h1>
+			<form action="/set-schedule" method="POST" class="form">
+				<input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+				<table class="table">
+					<tbody>
+						<tr>
+							<th scope="col">
+								Minute<br />
+								<small>
+									(0 - 59)
+								</small>
+							</th>
+							<th scope="col">
+								Hour<br />
+								<small>
+									(0 - 23)
+								</small>
+							</th>
+							<th scope="col">
+								Day of Month<br />
+								<small>
+									(1 - 31)
+								</small>
+							</th>
+							<th scope="col">
+								Month<br />
+								<small>
+									(1 - 12)
+								</small>
+							</th>
+							<th scope="col">
+								Day of Week<br />
+								<small>
+									(0 - 6 : Sun - Sat)
+								</small>
+							</th>
+						</tr>
+					</tbody>
+					<tbody>
+						<tr>
+							<td>
+								<input type="text" name="minute" value="*" class="form-control" />
+							</td>
+							<td>
+								<input type="text" name="hour" value="*"  class="form-control" />
+							</td>
+							<td>
+								<input type="text" name="dom" value="*"  class="form-control" />
+							</td>
+							<td>
+								<input type="text" name="month" value="*"  class="form-control" />
+							</td>
+							<td>
+								<input type="text" name="dow" value="*"  class="form-control" />
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="form-group">
+					<input type="submit" class="btn btn-primary" value="Schedule" />
+					<a href="/clear-schedule" class="btn btn-primary ml-2">Clear Schedule</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+{% endblock %}

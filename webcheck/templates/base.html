@@ -1,0 +1,28 @@
+
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Rocket Farm Site Down Detector</title>
+        <meta name="description" 
+        	content="Detects if our client sites our up or down">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="stylesheet" href="/static/css/main.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet" crossorigin="anonymous">
+        {% block head %}
+        {% endblock %}
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+        {% block content %}
+        {% endblock %}
+        <script src="/static/js/app.js"></script>
+    </body>
+    {% block scripts %}
+    {% endblock %}
+</html>
