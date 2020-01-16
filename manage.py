@@ -8,6 +8,7 @@ from flask_migrate import Migrate, MigrateCommand
 from webcheck.helpers import sendmail
 from webcheck.helpers import test_url
 import os
+import secrets
 
 manager = Manager(app)
 migrate = Migrate(app, db)
