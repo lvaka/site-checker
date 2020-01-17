@@ -4,3 +4,4 @@ SQLALCHEMY_DATABASE_URI = 'mysql://user:pass@host:port/database?unix_socket=path
 SQLALCHEMY_TRACK_MODIFICATIONS = False
 SENDMAIL_LOCATION = '/usr/sbin/sendmail'
 USER = 'user to set cronjobs under'
+ADMIN_EMAILS = 'list of emails to send to.  seperate by a comma'
