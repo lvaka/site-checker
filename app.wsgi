@@ -7,7 +7,7 @@ project_dir = os.path.join(cwd, 'webcheck')
 
 INTERP = os.path.join(env_dir, 'bin', 'python3.6')
 if sys.executable != INTERP:
-         os.execl(INTERP, INTERP, *sys.argv)
+	os.execl(INTERP, *sys.argv)
 
 # Add virtualenv packages to the start of the path
 sys.path.insert(0, os.path.join(env_dir, 'bin'))
